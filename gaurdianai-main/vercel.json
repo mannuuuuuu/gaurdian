@@ -2,11 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "server/index.ts",
+      "src": "gaurdianai-main/server/index.ts",
       "use": "@vercel/node"
     },
     {
-      "src": "client/package.json",
+      "src": "gaurdianai-main/client/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
@@ -16,7 +16,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server/index.ts"
+      "dest": "gaurdianai-main/server/index.ts"
     },
     {
       "handle": "filesystem"

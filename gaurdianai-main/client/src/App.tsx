@@ -1,17 +1,19 @@
-import { Box, Container, Heading } from '@chakra-ui/react'
+import React from 'react'
 
 function App() {
   return (
-    <Container maxW="container.xl" py={8}>
-      <Box textAlign="center">
-        <Heading as="h1" size="2xl" mb={4}>
-          Guardian AI
-        </Heading>
-        <Heading as="h2" size="md" color="gray.600">
-          AI-powered security system
-        </Heading>
-      </Box>
-    </Container>
+    <div style={{ 
+      textAlign: 'center', 
+      padding: '2rem',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+        Guardian AI
+      </h1>
+      <h2 style={{ fontSize: '1.5rem', color: '#666' }}>
+        AI-powered security system
+      </h2>
+    </div>
   )
 }
 

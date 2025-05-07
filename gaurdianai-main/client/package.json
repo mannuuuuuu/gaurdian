@@ -10,12 +10,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.22.3",
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "framer-motion": "^11.0.8"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
