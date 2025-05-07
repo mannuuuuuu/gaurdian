@@ -1,23 +1,18 @@
-import { Switch, Route } from "wouter";
-import Dashboard from "@/pages/Dashboard";
-import NotFound from "@/pages/not-found";
-
-// Custom route handler to handle all routes using the dashboard for now
-function Router() {
-  return (
-    <Switch>
-      <Route path="/" component={Dashboard} />
-      <Route path="/alerts" component={Dashboard} />
-      <Route path="/reports" component={Dashboard} />
-      <Route path="/contracts/:id" component={Dashboard} />
-      <Route path="/settings" component={Dashboard} />
-      <Route component={NotFound} />
-    </Switch>
-  );
-}
+import { Box, Container, Heading } from '@chakra-ui/react'
 
 function App() {
-  return <Router />;
+  return (
+    <Container maxW="container.xl" py={8}>
+      <Box textAlign="center">
+        <Heading as="h1" size="2xl" mb={4}>
+          Guardian AI
+        </Heading>
+        <Heading as="h2" size="md" color="gray.600">
+          AI-powered security system
+        </Heading>
+      </Box>
+    </Container>
+  )
 }
 
-export default App;
+export default App
