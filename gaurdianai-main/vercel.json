@@ -25,6 +25,7 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "DEMO_MODE": "true"
+    "DEMO_MODE": "false",
+    "GROQ_API_KEY": "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"
   }
 } 
