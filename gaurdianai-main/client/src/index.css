@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  --alert: 0 100% 50%;
+  --alert-light: 0 100% 80%;
+  --alert-dark: 0 100% 30%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  --alert: 0 100% 50%;
+  --alert-light: 0 100% 80%;
+  --alert-dark: 0 100% 30%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-slate-900 text-foreground;
+  }
+}
+
+/* Terminal styles for EventLog */
+.terminal {
+  @apply bg-slate-900 font-mono text-xs leading-5;
+}
+
+.terminal-line {
+  @apply py-1 px-1 border-b border-gray-800 text-gray-300 whitespace-pre-wrap break-all;
+}
+
+.terminal-line.info {
+  @apply text-blue-400;
+}
+
+.terminal-line.warning {
+  @apply text-amber-400;
+}
+
+.terminal-line.error {
+  @apply text-alert;
+}
+
+.terminal-line.command {
+  @apply text-green-400 font-bold;
+}
+
+/* Sidebar styles */
+.sidebar-item {
+  @apply flex items-center p-2 rounded-md transition-all duration-200;
+}
+
+.sidebar-item.active {
+  @apply bg-primary-dark/20 text-primary-light font-medium;
+  transform: translateX(4px);
+}
+
+.sidebar-item.inactive {
+  @apply text-gray-400 hover:bg-gray-700 hover:text-white;
+}
+
+.sidebar-item:hover svg {
+  @apply text-primary-light;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.shadow-glow-green {
+  box-shadow: 0 0 8px 2px rgba(45, 212, 191, 0.3);
+}
+
+.shadow-glow-red {
+  box-shadow: 0 0 8px 2px rgba(239, 68, 68, 0.3);
+}
+
+.shadow-glow-blue {
+  box-shadow: 0 0 8px 2px rgba(59, 130, 246, 0.3);
+}
